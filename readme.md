@@ -14,3 +14,21 @@
 3、grafana dashboard持久化
 
 4、搜集pod,node自定义的label
+
+
+### 配置PrometheusAlert
+###### 默认以钉钉为例
+1、如何修改告警的模板
+
+2、拦截发送到钉钉的告警信息到自定义的webhook
+
+
+## PromQL使用
+### 主要介绍PromQL基础查询
+1、包括计算函数： rate,irate,sum,count,group_left,group_right...
+
+2、以及计算符号: +,-,*,/,%
+
+3、过滤条件常用的计算符号：==,!=,>,<,>=,<=
+
+4、过滤条件使用正则表达式
