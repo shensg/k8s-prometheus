@@ -491,7 +491,7 @@ supervisorctl restart all
 {{ $urimsg:=""}}{{ range $key,$value:=.commonLabels }}{{$urimsg =  print $urimsg $key "%3D%22" $value "%22%2C" }}{{end}}[*** 点我屏蔽该告警]({{$var}}/#/silences/new?filter=%7B{{SplitString $urimsg 0 -3}}%7D)
 ```
 
-修改后模板内容(飞书的消息格式不完全支持MarkDown格式，一些图片无法正常查看，如果需要)
+修改后模板内容(飞书的消息格式不完全支持MarkDown格式，一些图片无法正常查看，如果需要就需要劫持内容自己发送)
 ```golang
 {{ $var := .externalURL}}{{ range $k,$v:=.alerts }}{{if eq $v.status "resolved"}}**[Prometheus恢复信息]({{$v.generatorURL}})**
 *[{{$v.labels.alertname}}]({{$var}})*
